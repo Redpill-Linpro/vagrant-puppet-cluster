@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+#
 require 'erb'
 require 'yaml'
 include YAML
@@ -13,7 +15,12 @@ site_tmpl = ERB.new(File.read('templates/site.pp.erb'))
 hosts_tmpl = ERB.new(File.read('templates/hosts.erb'))
 
 File.open(site_file, 'w').puts(site_tmpl.result(binding))
+puts "Wrting #{site_file}"
+
 File.open(vagrant_file, 'w').puts(vagrant_tmpl.result(binding))
+puts "Wrting #{vagrant_file}"
+
 File.open(hosts_file, 'w').puts(hosts_tmpl.result(binding))
+puts "Wrting #{hosts_file}"
 
 
