@@ -1,0 +1,6 @@
+<% @cluster.each_key do |host| %>
+node '<%= @cluster[host]['fqdn'] %>' {
+  include vagrant-devsuite
+
+}
+<% end %>

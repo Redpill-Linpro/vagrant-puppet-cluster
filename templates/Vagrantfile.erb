@@ -1,0 +1,24 @@
+Vagrant::Config.run do |config|
+  config.vm.define :puppetmaster do |puppetmaster_config|
+    puppetmaster_config.vm.box = "precise64"
+    puppetmaster_config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    puppetmaster_config.vm.host_name = "puppet"
+    puppetmaster_config.vm.network :hostonly, "10.0.0.10"
+
+    puppetmaster_config.vm.provision :puppet do |puppet|
+      puppet.manifests_path = "local/manifests"
+      puppet.module_path  = "local/modules"
+      puppet.manifest_file  = "puppetmaster.pp"
+    end
+  end
+
+<% @cluster.each_key do |host| %>
+  config.vm.define :<%= host %> do |<%= host %>_config|
+    <%= host %>_config.vm.box = "<%= @cluster[host]['box'] %>"
+    <%= host %>_config.vm.box_url = "<%= @cluster[host]['boxurl'] %>"
+    <%= host %>_config.vm.host_name = "<%= host %>"
+    <%= host %>_config.vm.network :hostonly, "<%= @cluster[host]['ip'] %>"
+    <%= host %>_config.vm.provision :shell, :path => "scripts/provision.pl"
+  end
+<% end %>
+end
