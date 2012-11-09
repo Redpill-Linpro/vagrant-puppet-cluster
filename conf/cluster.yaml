@@ -1,0 +1,31 @@
+---
+  front01:
+    ip: 10.0.0.101
+    fqdn: front01.int.net
+    box: Centos-6.3-minimal
+    boxurl: 'https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box'
+  front02:
+    ip: 10.0.0.102
+    fqdn: front02.int.net
+    box: Centos-6.3-minimal
+    boxurl: 'https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box'
+  cms01:
+    ip: 10.0.0.121
+    fqdn: cms01.int.net
+    box: Centos-6.3-minimal
+    boxurl: 'https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box'
+  cms02:
+    ip: 10.0.0.122
+    fqdn: cms02.int.net
+    box: Centos-6.3-minimal
+    boxurl: 'https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box'
+  web01:
+    ip: 10.0.0.141
+    fqdn: web01.int.net
+    box: Centos-6.3-minimal
+    boxurl: 'https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box'
+  web02:
+    ip: 10.0.0.142
+    fqdn: web02.int.net
+    box: Centos-6.3-minimal
+    boxurl: 'https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box'
