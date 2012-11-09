@@ -1,4 +1,4 @@
-Vagrnt puppet cluster software - easily set up small clusters in vagrant.
+Vagrant puppet cluster  - easily set up clusters in vagrant.
 ==============
 # Prerequisits for install
  
