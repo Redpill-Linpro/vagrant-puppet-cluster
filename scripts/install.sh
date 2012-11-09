@@ -173,7 +173,7 @@ puppet_installed() {
 run_puppet_agent() {
     echo
     echo "Trying a puppet agent run"
-    puppet agent --noop -t 2>&1 |
+    puppet agent --test 2>&1 |
         tee /tmp/puppet.$$.run
     echo
 
