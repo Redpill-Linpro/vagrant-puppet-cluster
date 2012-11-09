@@ -6,8 +6,8 @@ Vagrant::Config.run do |config|
     puppetmaster_config.vm.network :hostonly, "10.0.0.10"
 
     puppetmaster_config.vm.provision :puppet do |puppet|
-      puppet.manifests_path = "local/manifests"
-      puppet.module_path  = "local/modules"
+      puppet.manifests_path = "puppet/manifests"
+      puppet.module_path  = "puppet/modules"
       puppet.manifest_file  = "puppetmaster.pp"
     end
   end
