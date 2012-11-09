@@ -124,7 +124,7 @@ postinstall_puppetrun () {
     puppet apply -e '
 
     File {
-      owner => root,
+      owner => puppet,
       group => root,
     }
 
@@ -155,7 +155,7 @@ clean_vagrant_box () {
   echo "Removing vagrant ruby that always messes up stuff.."
   rm -rf /opt/vagrant_ruby
   echo "And puppet binaries.."
-  rm -f /usr/bin/puppet /usr/local/bin/puppetd /usr/sbin/puppetd /usr/local/sbin/puppetd
+  rm -f /usr/local/bin/puppetd /usr/sbin/puppetd /usr/local/sbin/puppetd
 
 }
 

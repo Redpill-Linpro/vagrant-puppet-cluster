@@ -16,8 +16,7 @@ class vagrant-devsuite::debian {
       package { 
         'puppet':
           ensure  => latest,
-          notify  => Exec['remove puppet vagrant'],
-          require => [ Apt::Source['puppetlabs'], File['/usr/local/bin/puppetd']];
+          require => [ Apt::Source['puppetlabs'] ];
         [ 'libaugeas-ruby',  'augeas-tools', 'augeas-lenses' ]:
           ensure => latest,
       }
