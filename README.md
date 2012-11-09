@@ -26,7 +26,7 @@ The /etc/puppet/ on the installed puppetmaster is exported to your vagrant envir
 
 This means you can edit manifests and modules directly in your <vagrantdir>/puppet/{modules,manifests}.
 
-== puppet clients
+## puppet clients
 
 Detects OS environments and installs puppet from puppetlabs. Currently supporting ubuntu,centons, sles and rhel.
 
