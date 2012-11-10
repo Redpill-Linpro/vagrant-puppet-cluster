@@ -24,3 +24,7 @@ task :restart_puppetmaster do
             end
         end
 end
+
+task :generate_config do
+  ruby "scripts/generate_config.rb"
+end

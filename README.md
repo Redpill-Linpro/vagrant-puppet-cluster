@@ -9,7 +9,7 @@ Vagrant puppet cluster  - easily set up clusters in vagrant.
  From git root 
   * git submodule init && git submodule update
   * edit conf/cluster.yaml 
-  * run scripts/generate_config.rb
+  * rake generate_config
   * vagrant up puppetmaster && vagrant provision puppetmaster 
   * vagrant up *your nodes*
 
@@ -17,8 +17,8 @@ Vagrant puppet cluster  - easily set up clusters in vagrant.
 
 # Vagrant environment
 
-I'm including a rakefile to do maintainence tasks like cleaning out
-certs.
+To clean on cluster: rake flush_certs
+To restart puppetmaster rake restart_puppetmaster
 
 ## puppetmaster
   
