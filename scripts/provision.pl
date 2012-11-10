@@ -4,7 +4,8 @@ use warnings;
 
 if ( -f "/.PUPPET-INSTALLED" ) {
 
-  my $retval = system("puppet agent --test");
+  # Specifying server here so no broken config can cock it up
+  my $retval = system("puppet agent --test --server puppet.int.net");
 
   if($retval == 0 or $retval == 2 or $retval == 512) {
     exit(0);

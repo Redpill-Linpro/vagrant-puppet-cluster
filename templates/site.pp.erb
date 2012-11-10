@@ -1,6 +1,13 @@
-<% @cluster.each_key do |host| %>
-node '<%= @cluster[host]['fqdn'] %>' {
+import "defines/*.pp"
+
+node master {
   include vagrant-devsuite
 
 }
-<% end %>
+
+<% @cluster.each_key do |host| %>
+node '<%= @cluster[host]['fqdn'] %>' inherits master {
+
+}
+<% end %> 
+
