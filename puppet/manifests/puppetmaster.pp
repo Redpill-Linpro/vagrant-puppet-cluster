@@ -10,7 +10,7 @@ class { puppetmaster:
   puppetmaster_service_enable => 'true',
   puppetmaster_report         => 'true',
   puppetmaster_autosign       => 'true',
-  puppetmaster_modulepath     => '$confdir/modules:$confdir/modules-0',
+  puppetmaster_modulepath     => '$confdir/site/modules:$confdir/modules:$confdir/modules-0',
   require                     => Apt::Source['puppetlabs'],
 }
 

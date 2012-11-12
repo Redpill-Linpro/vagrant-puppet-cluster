@@ -10,3 +10,6 @@
 [submodule "puppet/modules/puppetmaster"]
 	path = puppet/modules/puppetmaster
 	url = git@github.com:haraldsk/puppet-puppetmaster.git
+[submodule "puppet/site"]
+	path = puppet/site
+	url = git@github.com:haraldsk/rpl-puppet-config.git
